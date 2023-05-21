@@ -1,7 +1,8 @@
 baseURL = 'https://0xNOY.github.io/'
-languageCode = 'en-us'
 title = '0xPages'
 theme = 'stack'
+languageCode = 'ja'
+defaultContentLanguage = 'ja'
 
 [params]
 favicon = "/favicon.ico"
