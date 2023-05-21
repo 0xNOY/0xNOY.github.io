@@ -5,7 +5,7 @@ languageCode = 'ja'
 defaultContentLanguage = 'ja'
 
 [params]
-favicon = "/favicon.ico"
+favicon = "/images/favicon.ico"
 
 [params.footer]
 since = 2023
@@ -42,3 +42,9 @@ limit = 10
 
 [[params.widgets.page]]
 type = "toc"
+
+
+[params.opengraph]
+enabled = true
+local = true
+src = "/images/cover.webp"
