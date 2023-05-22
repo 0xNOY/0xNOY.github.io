@@ -17,8 +17,6 @@ sudo install ubuntu-mainline-kernel.sh /usr/local/bin
 
 ## 2. 現在のカーネルバージョンを確認する
 
-Ubuntu 20.04のデフォルトは5.4。以下を実行してそれを確認できる。
-
 ```bash
 uname -r
 ```
