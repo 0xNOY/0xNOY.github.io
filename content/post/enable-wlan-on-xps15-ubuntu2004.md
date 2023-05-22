@@ -23,4 +23,4 @@ sudo make install
 
 ## 方法2
 
-「[Ubuntu 20.04 の Kernel をアップデートする](/post/update-ubuntu2004-kernel/)」を参考にカーネルを `v5.15` ≥ にアップデートする。
+「[Ubuntu 20.04 の Kernel をアップデートする](/post/update-ubuntu2004-kernel/)」を参考にカーネルをアップデートする。
