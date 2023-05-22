@@ -3,6 +3,7 @@ title = '0xPages'
 theme = 'stack'
 languageCode = 'ja'
 defaultContentLanguage = 'ja'
+googleAnalytics = "G-WXPXXKQ01P"
 
 [params]
 favicon = "/images/favicon.ico"
