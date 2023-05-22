@@ -2,7 +2,7 @@
 title: "Ubuntu 20.04 で XPS-15-9530 の WLAN が認識されないときの対処法"
 date: 2023-05-21T11:39:00+09:00
 tags: ["Ubuntu", "XPS-15-9530", "トラブルシューティング"]
-draft: true
+draft: false
 ---
 
 
