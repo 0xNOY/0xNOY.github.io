@@ -3,7 +3,6 @@
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://raw.githubusercontent.com/pimlie/ubuntu-mainline-kernel.sh/master/ubuntu-mainline-kernel.sh
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo install ubuntu-mainline-kernel.sh /usr/local/bin
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="2-現在のカーネルバージョンを確認する">2. 現在のカーネルバージョンを確認する&lt;/h2>
-&lt;p>Ubuntu 20.04のデフォルトは5.4。以下を実行してそれを確認できる。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>uname -r
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="3-インストールしたいカーネルバージョンを決める">3. インストールしたいカーネルバージョンを決める&lt;/h2>
 &lt;p>&lt;a class="link" href="https://www.kernel.org/category/releases.html" target="_blank" rel="noopener"
@@ -46,4 +45,4 @@ v6.1.24 v6.1.25 v6.1.26 v6.1.27 v6.1.28 v6.1.29
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make -j16
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo make install
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="方法2">方法2&lt;/h2>
-&lt;p>「&lt;a class="link" href="https://0xNOY.github.io/post/update-ubuntu2004-kernel/" >Ubuntu 20.04 の Kernel をアップデートする&lt;/a>」を参考にカーネルを &lt;code>v5.15&lt;/code> ≥ にアップデートする。&lt;/p></description></item><item><title>アーカイブ</title><link>https://0xNOY.github.io/page/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://0xNOY.github.io/page/archives/</guid><description/></item><item><title>検索</title><link>https://0xNOY.github.io/page/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://0xNOY.github.io/page/search/</guid><description/></item></channel></rss>
+&lt;p>「&lt;a class="link" href="https://0xNOY.github.io/post/update-ubuntu2004-kernel/" >Ubuntu 20.04 の Kernel をアップデートする&lt;/a>」を参考にカーネルをアップデートする。&lt;/p></description></item><item><title>アーカイブ</title><link>https://0xNOY.github.io/page/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://0xNOY.github.io/page/archives/</guid><description/></item><item><title>検索</title><link>https://0xNOY.github.io/page/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://0xNOY.github.io/page/search/</guid><description/></item></channel></rss>

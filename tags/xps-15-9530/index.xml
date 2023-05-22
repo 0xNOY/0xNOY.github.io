@@ -9,4 +9,4 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make -j16
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo make install
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="方法2">方法2&lt;/h2>
-&lt;p>「&lt;a class="link" href="https://0xNOY.github.io/post/update-ubuntu2004-kernel/" >Ubuntu 20.04 の Kernel をアップデートする&lt;/a>」を参考にカーネルを &lt;code>v5.15&lt;/code> ≥ にアップデートする。&lt;/p></description></item></channel></rss>
+&lt;p>「&lt;a class="link" href="https://0xNOY.github.io/post/update-ubuntu2004-kernel/" >Ubuntu 20.04 の Kernel をアップデートする&lt;/a>」を参考にカーネルをアップデートする。&lt;/p></description></item></channel></rss>
