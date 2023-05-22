@@ -2,7 +2,7 @@
 title: "Ubuntu 20.04 の Kernel をアップデートする"
 date: 2023-05-21T11:54:00+09:00
 tags: ["Ubuntu"]
-draft: true
+draft: false
 ---
 
 
