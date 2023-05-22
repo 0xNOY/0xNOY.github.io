@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>トラブルシューティング on 0xPages</title><link>https://0xNOY.github.io/tags/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0/</link><description>Recent content in トラブルシューティング on 0xPages</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 21 May 2023 11:39:00 +0900</lastBuildDate><atom:link href="https://0xNOY.github.io/tags/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu 20.04 で XPS-15-9530 の WLAN が認識されないときの対処法</title><link>https://0xNOY.github.io/post/enable-wlan-on-xps15-ubuntu2004/</link><pubDate>Sun, 21 May 2023 11:39:00 +0900</pubDate><guid>https://0xNOY.github.io/post/enable-wlan-on-xps15-ubuntu2004/</guid><description>&lt;h2 id="方法1">方法1&lt;/h2>
+&lt;p>以下をコピーして、ターミナルにペーストし、実行する。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install build-essential
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git clone https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd backport-iwlwifi
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make defconfig-iwlwifi-public
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make -j16
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo make install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="方法2">方法2&lt;/h2>
+&lt;p>「&lt;a class="link" href="https://0xNOY.github.io/post/update-ubuntu2004-kernel/" >Ubuntu 20.04 の Kernel をアップデートする&lt;/a>」を参考にカーネルを &lt;code>v5.15&lt;/code> ≥ にアップデートする。&lt;/p></description></item></channel></rss>
