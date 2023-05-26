@@ -29,10 +29,10 @@ vncpasswd
 ## VNCサーバの起動
 
 以下のコマンドを実行することで、VNCサーバを起動できる。
-`display`オプションで、ディスプレイ番号を指定することができる。
+`display`オプションで、ディスプレイ番号を指定することができる。場合によっては、`:0`では起動できないので、`:1`などを指定する。
 
 ```bash
-x0tigervncserver -rfbauth ~/.vnc/passwd -display :1
+x0tigervncserver -rfbauth ~/.vnc/passwd -display :0
 ```
 
 また、安全なネットワーク内でなければ、`-localhost`オプションを付け、ローカルホストからのみの接続を許可することができる。
