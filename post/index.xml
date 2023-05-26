@@ -9,8 +9,8 @@
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vncpasswd
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vncサーバの起動">VNCサーバの起動&lt;/h2>
 &lt;p>以下のコマンドを実行することで、VNCサーバを起動できる。
-&lt;code>display&lt;/code>オプションで、ディスプレイ番号を指定することができる。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>x0tigervncserver -rfbauth ~/.vnc/passwd -display :1
+&lt;code>display&lt;/code>オプションで、ディスプレイ番号を指定することができる。場合によっては、&lt;code>:0&lt;/code>では起動できないので、&lt;code>:1&lt;/code>などを指定する。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>x0tigervncserver -rfbauth ~/.vnc/passwd -display :0
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>また、安全なネットワーク内でなければ、&lt;code>-localhost&lt;/code>オプションを付け、ローカルホストからのみの接続を許可することができる。
 このとき、クライアント側はSSHポートフォワーディングを使用する。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>x0tigervncserver -rfbauth ~/.vnc/passwd -display :1 -localhost
