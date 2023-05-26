@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>0xPages</title><link>https://0xNOY.github.io/</link><description>Recent content on 0xPages</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Mon, 22 May 2023 10:08:17 +0900</lastBuildDate><atom:link href="https://0xNOY.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hi 👋, I'm 0xNOY.</title><link>https://0xNOY.github.io/post/self-introduction/</link><pubDate>Mon, 22 May 2023 10:08:17 +0900</pubDate><guid>https://0xNOY.github.io/post/self-introduction/</guid><description>&lt;img src="https://0xNOY.github.io/images/cover.webp" alt="Featured image of post Hi 👋, I'm 0xNOY." /></description></item><item><title>Ubuntu 20.04 の Kernel をアップデートする</title><link>https://0xNOY.github.io/post/update-ubuntu2004-kernel/</link><pubDate>Sun, 21 May 2023 11:54:00 +0900</pubDate><guid>https://0xNOY.github.io/post/update-ubuntu2004-kernel/</guid><description>&lt;h2 id="1-カーネルインストーラをインストールする">1. カーネルインストーラをインストールする&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>0xPages</title><link>https://0xNOY.github.io/</link><description>Recent content on 0xPages</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Fri, 26 May 2023 15:06:37 +0900</lastBuildDate><atom:link href="https://0xNOY.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hi 👋, I'm 0xNOY.</title><link>https://0xNOY.github.io/post/self-introduction/</link><pubDate>Mon, 22 May 2023 10:08:17 +0900</pubDate><guid>https://0xNOY.github.io/post/self-introduction/</guid><description>&lt;img src="https://0xNOY.github.io/images/cover.webp" alt="Featured image of post Hi 👋, I'm 0xNOY." /></description></item><item><title>Ubuntu20.04のデスクトップ(GUI)にVNCを使いリモートアクセスする</title><link>https://0xNOY.github.io/post/ubuntu2004-x0vncserver/</link><pubDate>Fri, 26 May 2023 15:06:37 +0900</pubDate><guid>https://0xNOY.github.io/post/ubuntu2004-x0vncserver/</guid><description>&lt;h1 id="サーバの準備">サーバの準備&lt;/h1>
+&lt;h2 id="vncサーバのインストール">VNCサーバのインストール&lt;/h2>
+&lt;p>VNCサーバには、TigerVNCを使用する。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt update -y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install -y tigervnc-scraping-server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="サーバの設定">サーバの設定&lt;/h2>
+&lt;p>以下のコマンドを入力し、パスワードを設定する。
+表示専用パスワードを設定するか聞かれるので、特に理由がなければ&lt;code>n&lt;/code>を入力する。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vncpasswd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vncサーバの起動">VNCサーバの起動&lt;/h2>
+&lt;p>以下のコマンドを実行することで、VNCサーバを起動できる。
+&lt;code>display&lt;/code>オプションで、ディスプレイ番号を指定することができる。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>x0tigervncserver -rfbauth ~/.vnc/passwd -display :1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>また、安全なネットワーク内でなければ、&lt;code>-localhost&lt;/code>オプションを付け、ローカルホストからのみの接続を許可することができる。
+このとき、クライアント側はSSHポートフォワーディングを使用する。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>x0tigervncserver -rfbauth ~/.vnc/passwd -display :1 -localhost
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="クライアントの準備">クライアントの準備&lt;/h1>
+&lt;h2 id="vncクライアントのインストール">VNCクライアントのインストール&lt;/h2>
+&lt;p>VNCクライアントには、TigerVNCを使用する。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt update -y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install -y tigervnc-viewer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="クライアントの設定">クライアントの設定&lt;/h2>
+&lt;p>以下のコマンドを実行し、設定を保存する。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat &lt;span style="color:#e6db74">&amp;lt;&amp;lt;EOF &amp;gt; ~/.vnc/default.tigervnc
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">TigerVNC Configuration file Version 1.0
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">ServerName=
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">X509CA=
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">X509CRL=
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">SecurityTypes=None,VncAuth,Plain,TLSNone,TLSVnc,TLSPlain,X509None,X509Vnc,X509Plain
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">DotWhenNoCursor=0
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">AutoSelect=0
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">FullColor=1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">LowColorLevel=2
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">PreferredEncoding=Tight
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">CustomCompressLevel=0
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">CompressLevel=2
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">NoJPEG=0
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">QualityLevel=2
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">FullScreen=0
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">FullScreenAllMonitors=1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">DesktopSize=
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">RemoteResize=1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">ViewOnly=0
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">Shared=1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">AcceptClipboard=1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">SendClipboard=1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">SendPrimary=1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">SetPrimary=1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">MenuKey=F8
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">FullscreenSystemKeys=1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vncクライアントの起動接続">VNCクライアントの起動・接続&lt;/h2>
+&lt;h3 id="guiでの接続">GUIでの接続&lt;/h3>
+&lt;p>まず、&lt;code>Applications&lt;/code>から&lt;code>TigerVNC Viewer&lt;/code>を起動する。&lt;/p>
+&lt;p>&lt;img src="https://0xNOY.github.io/post/ubuntu2004-x0vncserver/tigervnc_icon.webp"
+width="3456"
+height="2160"
+srcset="https://0xNOY.github.io/post/ubuntu2004-x0vncserver/tigervnc_icon_hu93c7f3749b8eec3be57b768928f74d4a_77818_480x0_resize_q75_h2_box_2.webp 480w, https://0xNOY.github.io/post/ubuntu2004-x0vncserver/tigervnc_icon_hu93c7f3749b8eec3be57b768928f74d4a_77818_1024x0_resize_q75_h2_box_2.webp 1024w"
+loading="lazy"
+alt="TigerVNC Viewer"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+>&lt;/p>
+&lt;p>次に、サーバのIPアドレスとポート番号を入力し、&lt;code>Connect&lt;/code>をクリックする。&lt;/p>
+&lt;p>&lt;img src="https://0xNOY.github.io/post/ubuntu2004-x0vncserver/tigervnc_connection_details.webp"
+width="452"
+height="199"
+srcset="https://0xNOY.github.io/post/ubuntu2004-x0vncserver/tigervnc_connection_details_hu7680513225892f4bb2dfc269b7320dbd_6036_480x0_resize_q75_h2_box_2.webp 480w, https://0xNOY.github.io/post/ubuntu2004-x0vncserver/tigervnc_connection_details_hu7680513225892f4bb2dfc269b7320dbd_6036_1024x0_resize_q75_h2_box_2.webp 1024w"
+loading="lazy"
+alt="TigerVNC Viewer: Connection Details"
+class="gallery-image"
+data-flex-grow="227"
+data-flex-basis="545px"
+>&lt;/p>
+&lt;p>最後に、パスワードを入力し、&lt;code>OK&lt;/code>をクリックする。&lt;/p>
+&lt;p>&lt;img src="https://0xNOY.github.io/post/ubuntu2004-x0vncserver/tigervnc_authentication.webp"
+width="412"
+height="169"
+srcset="https://0xNOY.github.io/post/ubuntu2004-x0vncserver/tigervnc_authentication_hufb50e2b7606230c35bea4f113b71ed4f_4744_480x0_resize_q75_h2_box_2.webp 480w, https://0xNOY.github.io/post/ubuntu2004-x0vncserver/tigervnc_authentication_hufb50e2b7606230c35bea4f113b71ed4f_4744_1024x0_resize_q75_h2_box_2.webp 1024w"
+loading="lazy"
+alt="TigerVNC Viewer: Authentication"
+class="gallery-image"
+data-flex-grow="243"
+data-flex-basis="585px"
+>&lt;/p>
+&lt;h3 id="コマンドラインでの接続">コマンドラインでの接続&lt;/h3>
+&lt;p>まず、サーバと同じVNCパスワードを設定する。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vncpasswd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>そして、以下のコマンドを実行することで、VNCクライアントを起動し、サーバに接続できる。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vncviewer &amp;lt;IPアドレス&amp;gt;:&amp;lt;ポート番号&amp;gt; -passwd ~/.vnc/passwd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Ubuntu 20.04 の Kernel をアップデートする</title><link>https://0xNOY.github.io/post/update-ubuntu2004-kernel/</link><pubDate>Sun, 21 May 2023 11:54:00 +0900</pubDate><guid>https://0xNOY.github.io/post/update-ubuntu2004-kernel/</guid><description>&lt;h2 id="1-カーネルインストーラをインストールする">1. カーネルインストーラをインストールする&lt;/h2>
 &lt;p>以下をターミナルにコピペして実行する。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://raw.githubusercontent.com/pimlie/ubuntu-mainline-kernel.sh/master/ubuntu-mainline-kernel.sh
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo install ubuntu-mainline-kernel.sh /usr/local/bin
